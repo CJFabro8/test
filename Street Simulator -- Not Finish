@@ -1,0 +1,233 @@
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+
+local Window = OrionLib:MakeWindow({Name = "Spilter -- Street Simulator -- not finish", SaveConfig = true, ConfigFolder = "Spilter"})
+
+OrionLib:MakeNotification({
+	Name = "Thank you for using this script",
+	Content = "All thanks to orion library go check them out!",
+	Image = "rbxassetid://4483345998",
+	Time = 5
+})
+
+local Tab1 = Window:MakeTab({
+	Name = "Main",
+	Icon = "http://www.roblox.com/asset/?id=740923206",
+	PremiumOnly = false
+})
+
+Tab1:AddLabel("E")
+
+Tab1:AddButton({
+	Name = "infinite yield",
+	Callback = function()
+      		loadstring(game:HttpGet(('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'),true))()
+  	end    
+})
+
+Tab1:AddButton({
+	Name = "Teleport to Chips",
+	Callback = function()
+      		for i,v in pairs(game:GetService("Workspace"):GetChildren()) do
+    if v.Name == "Chips" then
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.CFrame
+    end
+end
+  	end    
+})
+
+Tab1:AddButton({
+	Name = "Teleport to Apple",
+	Callback = function()
+      		for i,v in pairs(game:GetService("Workspace"):GetChildren()) do
+    if v.Name == "Apple" then
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.CFrame
+    end
+end
+  	end    
+})
+
+Tab1:AddButton({
+	Name = "Teleport to Soap",
+	Callback = function()
+      		for i,v in pairs(game:GetService("Workspace"):GetChildren()) do
+    if v.Name == "Bar Soap" then
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.CFrame
+    end
+end
+  	end    
+})
+
+Tab1:AddButton({
+	Name = "Teleport to Ketchup",
+	Callback = function()
+      		for i,v in pairs(game:GetService("Workspace"):GetChildren()) do
+    if v.Name == "Ketchup" then
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.CFrame
+    end
+end
+  	end    
+})
+
+Tab1:AddButton({
+	Name = "Teleport to Sriracha Bottle",
+	Callback = function()
+      		for i,v in pairs(game:GetService("Workspace"):GetChildren()) do
+    if v.Name == "Sriracha Bottle" then
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.CFrame
+    end
+end
+  	end    
+})
+
+Tab1:AddButton({
+	Name = "Teleport to Flamethrower",
+	Callback = function()
+      		for i,v in pairs(game:GetService("Workspace"):GetChildren()) do
+    if v.Name == "Flamethrower" then
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.CFrame
+    end
+end
+  	end    
+})
+
+Tab1:AddButton({
+	Name = "Teleport to Key",
+	Callback = function()
+      		for i,v in pairs(game:GetService("Workspace"):GetChildren()) do
+    if v.Name == "Key" then
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.CFrame
+    end
+end
+  	end    
+})
+
+Tab1:AddButton({
+	Name = "Teleport to Dark Heart",
+	Callback = function()
+      		for i,v in pairs(game:GetService("Workspace"):GetChildren()) do
+    if v.Name == "Dark Heart" then
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.CFrame
+    end
+end
+  	end    
+})
+
+local Tab2 = Window:MakeTab({
+	Name = "LocalPlayer",
+	Icon = "http://www.roblox.com/asset/?id=7315190229",
+	PremiumOnly = false
+})
+
+Tab2:AddSlider({
+	Name = "Jumppower",
+	Min = 50,
+	Max = 1000,
+	Default = 5,
+	Color = Color3.fromRGB(255,255,255),
+	Increment = 1,
+	ValueName = "JumpPower",
+	Callback = function(v)
+		game.Players.LocalPlayer.Character.Humanoid.JumpPower = v
+	end    
+})
+
+Tab2:AddSlider({
+	Name = "WalkSpeed",
+	Min = 16,
+	Max = 1000,
+	Default = 5,
+	Color = Color3.fromRGB(255,255,255),
+	Increment = 1,
+	ValueName = "WalkSpeed",
+	Callback = function(v)
+		game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = v
+	end    
+})
+
+Tab2:AddToggle({
+	Name = "God mode | it doesnt work on this game",
+	Default = false,
+	Callback = function(s)
+		        getgenv().godmode = s
+        while true do
+            if not getgenv().godmode then return end
+            print("Debug")
+            game.Players.LocalPlayer.Character.Humanoid.Health = math.huge
+            wait()
+        end
+	end    
+})
+
+local Tab3 = Window:MakeTab({
+	Name = "Combo Items",
+	Icon = "http://www.roblox.com/asset/?id=8171037230",
+	PremiumOnly = false
+})
+
+Tab3:AddLabel("you need to buy these items the codes are in ComboCodes")
+
+Tab3:AddButton({
+	Name = "Chicken Sandwich",
+	Callback = function()
+      		local args = {
+    [1] = game:GetService("ReplicatedStorage").ComboItems:FindFirstChild("Chicken Sandwich"),
+    [2] = "Equip"
+}
+
+game:GetService("ReplicatedStorage").Events.ItemAction:FireServer(unpack(args))
+
+  	end    
+})
+
+Tab3:AddButton({
+	Name = "Sprite Cranberry",
+	Callback = function()
+      		local args = {
+    [1] = game:GetService("ReplicatedStorage").ComboItems:FindFirstChild("Sprite Cranberry"),
+    [2] = "Equip"
+}
+
+game:GetService("ReplicatedStorage").Events.ItemAction:FireServer(unpack(args))
+
+  	end    
+})
+
+Tab3:AddButton({
+	Name = "Birthday Cake",
+	Callback = function()
+      		local args = {
+    [1] = game:GetService("ReplicatedStorage").ComboItems:FindFirstChild("Birthday Cake"),
+    [2] = "Equip"
+}
+
+game:GetService("ReplicatedStorage").Events.ItemAction:FireServer(unpack(args))
+
+  	end    
+})
+
+Tab3:AddButton({
+	Name = "Tennis Racket",
+	Callback = function()
+      		local args = {
+    [1] = game:GetService("ReplicatedStorage").ComboItems:FindFirstChild("Tennis Racket"),
+    [2] = "Equip"
+}
+
+game:GetService("ReplicatedStorage").Events.ItemAction:FireServer(unpack(args))
+
+  	end    
+})
+
+local Tab4 = Window:MakeTab({
+	Name = "ComboCodes",
+	Icon = "http://www.roblox.com/asset/?id=9282439605",
+	PremiumOnly = false
+})
+
+Tab4:AddLabel("Sprite Cranberry | 1 2 3 4 5")
+
+Tab4:AddLabel("Chicken Sandwich | 5 4 3 2 1")
+
+Tab4:AddLabel("Tennis Racket | 0 0 0 1 1")
+
+Tab4:AddLabel("Birthday Cake | 5 2 6 0 0")
