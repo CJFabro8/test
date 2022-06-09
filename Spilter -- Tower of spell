@@ -1,0 +1,120 @@
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+
+local Window = OrionLib:MakeWindow({Name = "Spilter", SaveConfig = true, ConfigFolder = "Spilter"})
+
+OrionLib:MakeNotification({
+	Name = "Thank you for using this script",
+	Content = "All thanks to orion library go check them out!",
+	Image = "rbxassetid://4483345998",
+	Time = 5
+})
+
+local Tab1 = Window:MakeTab({
+	Name = "Main",
+	Icon = "http://www.roblox.com/asset/?id=740923206",
+	PremiumOnly = false
+})
+
+Tab1:AddButton({
+	Name = "infinite yield",
+	Callback = function()
+      		loadstring(game:HttpGet(('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'),true))()
+  	end    
+})
+
+Tab1:AddButton({
+	Name = "Invin",
+	Callback = function()
+      		local args = {
+    [1] = {
+        ["Name"] = "Invincibility",
+        ["Price"] = -350
+    }
+}
+
+game:GetService("ReplicatedStorage").MutatorEvent:FireServer(unpack(args))
+
+  	end    
+})
+
+Tab1:AddButton({
+	Name = "Extra time",
+	Callback = function()
+      		local args = {
+    [1] = {
+        ["Name"] = "Extra Time",
+        ["Price"] = -100
+    }
+}
+
+game:GetService("ReplicatedStorage").MutatorEvent:FireServer(unpack(args))
+
+  	end    
+})
+
+Tab1:AddButton({
+	Name = "30B cash",
+	Callback = function()
+      		local args = {
+    [1] = {
+        ["Name"] = "Fog",
+        ["Price"] = -30000000000
+    }
+}
+
+game:GetService("ReplicatedStorage").MutatorEvent:FireServer(unpack(args))
+
+  	end    
+})
+
+local Tab2 = Window:MakeTab({
+	Name = "LocalPlayer",
+	Icon = "http://www.roblox.com/asset/?id=7315190229",
+	PremiumOnly = false
+})
+
+Tab2:AddSlider({
+	Name = "Jumppower",
+	Min = 50,
+	Max = 1000,
+	Default = 5,
+	Color = Color3.fromRGB(255,255,255),
+	Increment = 1,
+	ValueName = "JumpPower",
+	Callback = function(v)
+		game.Players.LocalPlayer.Character.Humanoid.JumpPower = v
+	end    
+})
+
+Tab2:AddSlider({
+	Name = "WalkSpeed",
+	Min = 16,
+	Max = 1000,
+	Default = 5,
+	Color = Color3.fromRGB(255,255,255),
+	Increment = 1,
+	ValueName = "WalkSpeed",
+	Callback = function(v)
+		game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = v
+	end    
+})
+
+Tab2:AddToggle({
+	Name = "God mode",
+	Default = false,
+	Callback = function(s)
+		        getgenv().godmode = s
+        while true do
+            if not getgenv().godmode then return end
+            print("Debug")
+            game.Players.LocalPlayer.Character.Humanoid.Health = math.huge
+            wait()
+        end
+	end    
+})
+
+local Tab3 = Window:MakeTab({
+	Name = "Misc",
+	Icon = "http://www.roblox.com/asset/?id=8171037230",
+	PremiumOnly = false
+})
