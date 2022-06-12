@@ -1,0 +1,7 @@
+if game.PlaceId == 6808416928 then
+    loadstring(game:HttpGet(('https://raw.githubusercontent.com/CJFabro8/test/main/Spilter%20--%20Aimblox%20Beta'),true))()
+end
+
+if game.PlaceId == 6112589711 then
+    loadstring(game:HttpGet(('https://raw.githubusercontent.com/CJFabro8/test/main/Spilter%20--%20Tower%20of%20spell'),true))()
+end
