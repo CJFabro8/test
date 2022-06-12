@@ -1,0 +1,151 @@
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+
+local Window = OrionLib:MakeWindow({Name = "Spilter -- Aimblox Beta", SaveConfig = true, ConfigFolder = "Spilter"})
+
+OrionLib:MakeNotification({
+	Name = "Thank you for using this script",
+	Content = "All thanks to orion library go check them out!",
+	Image = "rbxassetid://4483345998",
+	Time = 5
+})
+
+local Tab1 = Window:MakeTab({
+	Name = "Main",
+	Icon = "http://www.roblox.com/asset/?id=740923206",
+	PremiumOnly = false
+})
+
+Tab1:AddLabel("i have seen patched scripts from youtube feel free to use this")
+
+Tab1:AddButton({
+	Name = "infinite yield",
+	Callback = function()
+      		loadstring(game:HttpGet(('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'),true))()
+  	end    
+})
+
+Tab1:AddButton({
+	Name = "Silent Aim",
+	Callback = function()
+      		local Players = game:GetService("Players")
+
+local LocalPlayer = Players.LocalPlayer
+local Camera = workspace.CurrentCamera
+
+local Mouse = LocalPlayer:GetMouse()
+
+local WorldToScreenPoint = Camera.WorldToScreenPoint
+local GetPlayers = Players.GetPlayers
+local FindFirstChild = game.FindFirstChild
+
+local function GetOnScreenPosition(V3)
+	local Position, IsVisible = WorldToScreenPoint(Camera, V3)
+	return Vector2.new(Position.X, Position.Y), IsVisible
+end
+
+local function GetDirection(Origin, Position)
+    return (Position - Origin).Unit * (Origin - Position).Magnitude
+end
+
+local function GetMousePosition()
+    return Vector2.new(Mouse.X, Mouse.Y)
+end
+
+local function GetClosestPlayer()
+	local Closest, Distance = nil, 10000
+
+	for _, Player in next, GetPlayers(Players) do
+		if Player ~= LocalPlayer then
+			local Character = Player.Character
+			local Head = Character and FindFirstChild(Character, "Head")
+			local Humanoid = Character and FindFirstChild(Character, "Humanoid")
+			if Head and (Humanoid and Humanoid.Health > 0) then
+				local ScreenPos, IsVisible = GetOnScreenPosition(Head.Position)
+				if IsVisible then
+					local _Distance = (GetMousePosition() - ScreenPos).Magnitude
+					if _Distance <= Distance then
+						Closest = Head
+						Distance = _Distance
+					end
+				end
+			end
+		end
+	end
+
+	return Closest, Distance
+end
+
+local oldNamecall
+oldNamecall = hookmetamethod(game, "__namecall", function(...)
+	local Method = getnamecallmethod()
+	local Arguments = {...}
+
+	if Arguments[1] == workspace and Method == "Raycast" then
+		if typeof(Arguments[#Arguments]) ~= "RaycastParams" then
+			return oldNamecall(...)
+		end
+
+		local HitPart = GetClosestPlayer()
+
+		if HitPart then
+			Arguments[3] = GetDirection(Arguments[2], HitPart.Position)
+			return oldNamecall(unpack(Arguments))
+		end
+	end
+
+	return oldNamecall(...)
+end)
+  	end    
+})
+
+local Tab2 = Window:MakeTab({
+	Name = "LocalPlayer",
+	Icon = "http://www.roblox.com/asset/?id=7315190229",
+	PremiumOnly = false
+})
+
+Tab2:AddSlider({
+	Name = "Jumppower",
+	Min = 50,
+	Max = 1000,
+	Default = 5,
+	Color = Color3.fromRGB(255,255,255),
+	Increment = 1,
+	ValueName = "JumpPower",
+	Callback = function(v)
+		game.Players.LocalPlayer.Character.Humanoid.JumpPower = v
+	end    
+})
+
+Tab2:AddSlider({
+	Name = "WalkSpeed",
+	Min = 16,
+	Max = 1000,
+	Default = 5,
+	Color = Color3.fromRGB(255,255,255),
+	Increment = 1,
+	ValueName = "WalkSpeed",
+	Callback = function(v)
+		game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = v
+	end    
+})
+
+Tab2:AddToggle({
+	Name = "God mode",
+	Default = false,
+	Callback = function(s)
+		        getgenv().godmode = s
+        while true do
+            if not getgenv().godmode then return end
+            print("Debug")
+            game.Players.LocalPlayer.Character.Humanoid.Health = math.huge
+            wait()
+        end
+	end    
+})
+
+local Tab3 = Window:MakeTab({
+	Name = "Misc",
+	Icon = "http://www.roblox.com/asset/?id=8171037230",
+	PremiumOnly = false
+})
