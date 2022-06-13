@@ -1,3 +1,5 @@
+--warning do not copy anything from this--
+
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
 
 local Window = OrionLib:MakeWindow({Name = "Spilter", SaveConfig = true, ConfigFolder = "Spilter"})
