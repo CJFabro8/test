@@ -1,0 +1,345 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local ModMenu = Instance.new("ScreenGui")
+local Icon = Instance.new("ImageButton")
+local Frame2 = Instance.new("ImageButton")
+local infyield = Instance.new("TextButton")
+local ArsenalHitbox = Instance.new("TextButton")
+local Aimbot = Instance.new("TextButton")
+local Bloxhunt = Instance.new("TextButton")
+local Invisiblefling = Instance.new("TextButton")
+local OxieHub = Instance.new("TextButton")
+local RevizAdmin = Instance.new("TextButton")
+local ZyrexHub = Instance.new("TextButton")
+local Exit = Instance.new("TextButton")
+local KrakenHub = Instance.new("TextButton")
+local TextLabel = Instance.new("TextLabel")
+
+--Properties:
+
+ModMenu.Name = "ModMenu"
+ModMenu.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ModMenu.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Icon.Name = "Icon"
+Icon.Parent = ModMenu
+Icon.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Icon.Position = UDim2.new(0.204492643, 0, 0.515993476, 0)
+Icon.Size = UDim2.new(0, 56, 0, 53)
+Icon.Image = "rbxassetid://7707037012"
+
+Frame2.Name = "Frame2"
+Frame2.Parent = ModMenu
+Frame2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Frame2.Position = UDim2.new(0.364833474, 0, 0.0970986113, 0)
+Frame2.Size = UDim2.new(0, 345, 0, 446)
+Frame2.Image = "rbxassetid://7707037012"
+
+infyield.Name = "inf yield"
+infyield.Parent = Frame2
+infyield.BackgroundColor3 = Color3.fromRGB(65, 65, 65)
+infyield.BackgroundTransparency = 0.500
+infyield.Position = UDim2.new(0, 0, 0.0358744413, 0)
+infyield.Size = UDim2.new(0, 345, 0, 34)
+infyield.Font = Enum.Font.SourceSans
+infyield.Text = "Infinite yield"
+infyield.TextColor3 = Color3.fromRGB(255, 255, 255)
+infyield.TextScaled = true
+infyield.TextSize = 14.000
+infyield.TextWrapped = true
+infyield.MouseButton1Down:connect(function()
+	loadstring(game:HttpGet(('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'),true))()
+end)
+
+ArsenalHitbox.Name = "Arsenal Hitbox"
+ArsenalHitbox.Parent = Frame2
+ArsenalHitbox.BackgroundColor3 = Color3.fromRGB(65, 65, 65)
+ArsenalHitbox.BackgroundTransparency = 0.500
+ArsenalHitbox.Position = UDim2.new(0, 0, 0.11210762, 0)
+ArsenalHitbox.Size = UDim2.new(0, 345, 0, 50)
+ArsenalHitbox.Font = Enum.Font.SourceSans
+ArsenalHitbox.Text = "ArsenalHitbox"
+ArsenalHitbox.TextColor3 = Color3.fromRGB(255, 255, 255)
+ArsenalHitbox.TextScaled = true
+ArsenalHitbox.TextSize = 14.000
+ArsenalHitbox.TextWrapped = true
+ArsenalHitbox.MouseButton1Down:connect(function()
+	loadstring(game:HttpGet(('https://raw.githubusercontent.com/CJFabro8/test/main/arsenal%20hitbox%20boblox'),true))()
+end)
+
+Aimbot.Name = "Aimbot"
+Aimbot.Parent = Frame2
+Aimbot.BackgroundColor3 = Color3.fromRGB(65, 65, 65)
+Aimbot.BackgroundTransparency = 0.500
+Aimbot.Position = UDim2.new(0, 0, 0.224215239, 0)
+Aimbot.Size = UDim2.new(0, 345, 0, 50)
+Aimbot.Font = Enum.Font.SourceSans
+Aimbot.Text = "Aimbot"
+Aimbot.TextColor3 = Color3.fromRGB(255, 255, 255)
+Aimbot.TextScaled = true
+Aimbot.TextSize = 14.000
+Aimbot.TextWrapped = true
+ArsenalHitbox.MouseButton1Down:connect(function()
+	loadstring(game:HttpGet(('https://raw.githubusercontent.com/CJFabro8/test/main/AIMBOTE'),true))()
+end)
+
+Bloxhunt.Name = "Bloxhunt"
+Bloxhunt.Parent = Frame2
+Bloxhunt.BackgroundColor3 = Color3.fromRGB(65, 65, 65)
+Bloxhunt.BackgroundTransparency = 0.500
+Bloxhunt.Position = UDim2.new(0, 0, 0.336322844, 0)
+Bloxhunt.Size = UDim2.new(0, 345, 0, 50)
+Bloxhunt.Font = Enum.Font.SourceSans
+Bloxhunt.Text = "Bloxhunt"
+Bloxhunt.TextColor3 = Color3.fromRGB(255, 255, 255)
+Bloxhunt.TextScaled = true
+Bloxhunt.TextSize = 14.000
+Bloxhunt.TextWrapped = true
+Bloxhunt.MouseButton1Down:connect(function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/Denverrz/scripts/master/BLOXWARE_v1.0.txt", true))()
+end)
+
+Invisiblefling.Name = "Invisible fling"
+Invisiblefling.Parent = Frame2
+Invisiblefling.BackgroundColor3 = Color3.fromRGB(65, 65, 65)
+Invisiblefling.BackgroundTransparency = 0.500
+Invisiblefling.Position = UDim2.new(0, 0, 0.562780261, 0)
+Invisiblefling.Size = UDim2.new(0, 345, 0, 50)
+Invisiblefling.Font = Enum.Font.SourceSans
+Invisiblefling.Text = "Invisible fling"
+Invisiblefling.TextColor3 = Color3.fromRGB(255, 255, 255)
+Invisiblefling.TextScaled = true
+Invisiblefling.TextSize = 14.000
+Invisiblefling.TextWrapped = true
+Invisiblefling.MouseButton1Down:connect(function()
+	loadstring(game:HttpGet(('https://raw.githubusercontent.com/CJFabro8/test/main/flinmg'),true))()
+end)
+
+OxieHub.Name = "OxieHub"
+OxieHub.Parent = Frame2
+OxieHub.BackgroundColor3 = Color3.fromRGB(65, 65, 65)
+OxieHub.BackgroundTransparency = 0.500
+OxieHub.Position = UDim2.new(0, 0, 0.674887896, 0)
+OxieHub.Size = UDim2.new(0, 345, 0, 50)
+OxieHub.Font = Enum.Font.SourceSans
+OxieHub.Text = "OxieHub"
+OxieHub.TextColor3 = Color3.fromRGB(255, 255, 255)
+OxieHub.TextScaled = true
+OxieHub.TextSize = 14.000
+OxieHub.TextWrapped = true
+OxieHub.MouseButton1Down:connect(function()
+	loadstring(game:HttpGet(('https://github.com/MarsQQ/ScriptHubScripts/blob/master/OxieHub'),true))()
+end)
+
+RevizAdmin.Name = "Reviz Admin"
+RevizAdmin.Parent = Frame2
+RevizAdmin.BackgroundColor3 = Color3.fromRGB(65, 65, 65)
+RevizAdmin.BackgroundTransparency = 0.500
+RevizAdmin.Position = UDim2.new(0, 0, 0.78699553, 0)
+RevizAdmin.Size = UDim2.new(0, 345, 0, 50)
+RevizAdmin.Font = Enum.Font.SourceSans
+RevizAdmin.Text = "Reviz Admin"
+RevizAdmin.TextColor3 = Color3.fromRGB(255, 255, 255)
+RevizAdmin.TextScaled = true
+RevizAdmin.TextSize = 14.000
+RevizAdmin.TextWrapped = true
+RevizAdmin.MouseButton1Down:connect(function()
+	loadstring(game:HttpGet(('https://raw.githubusercontent.com/CJFabro8/test/main/reviz%20de%20admin'),true))()
+end)
+
+ZyrexHub.Name = "ZyrexHub"
+ZyrexHub.Parent = Frame2
+ZyrexHub.BackgroundColor3 = Color3.fromRGB(65, 65, 65)
+ZyrexHub.BackgroundTransparency = 0.500
+ZyrexHub.Position = UDim2.new(0, 0, 0.899103165, 0)
+ZyrexHub.Size = UDim2.new(0, 345, 0, 45)
+ZyrexHub.Font = Enum.Font.SourceSans
+ZyrexHub.Text = "ZyrexHub"
+ZyrexHub.TextColor3 = Color3.fromRGB(255, 255, 255)
+ZyrexHub.TextScaled = true
+ZyrexHub.TextSize = 14.000
+ZyrexHub.TextWrapped = true
+ZyrexHub.MouseButton1Down:connect(function()
+	loadstring(game:HttpGet(('https://raw.githubusercontent.com/CJFabro8/test/main/omg'),true))()
+end)
+
+Exit.Name = "Exit"
+Exit.Parent = Frame2
+Exit.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+Exit.Position = UDim2.new(0.895652175, 0, 0, 0)
+Exit.Size = UDim2.new(0, 36, 0, 37)
+Exit.Font = Enum.Font.SourceSans
+Exit.Text = "X"
+Exit.TextColor3 = Color3.fromRGB(255, 255, 255)
+Exit.TextScaled = true
+Exit.TextSize = 14.000
+Exit.TextWrapped = true
+
+KrakenHub.Name = "KrakenHub"
+KrakenHub.Parent = Frame2
+KrakenHub.BackgroundColor3 = Color3.fromRGB(65, 65, 65)
+KrakenHub.BackgroundTransparency = 0.500
+KrakenHub.Position = UDim2.new(0, 0, 0.450672626, 0)
+KrakenHub.Size = UDim2.new(0, 345, 0, 50)
+KrakenHub.Font = Enum.Font.SourceSans
+KrakenHub.Text = "KrakenHub"
+KrakenHub.TextColor3 = Color3.fromRGB(255, 255, 255)
+KrakenHub.TextScaled = true
+KrakenHub.TextSize = 14.000
+KrakenHub.TextWrapped = true
+
+TextLabel.Parent = Frame2
+TextLabel.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.Size = UDim2.new(0, 309, 0, 16)
+TextLabel.Font = Enum.Font.SourceSans
+TextLabel.Text = "Rusty Mod menu"
+TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.TextSize = 14.000
+
+-- Scripts:
+
+local function MSVBGZ_fake_script() -- Icon.LocalScript 
+	local script = Instance.new('LocalScript', Icon)
+
+	local frame = script.Parent.Parent.Frame2
+	local open = false
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		if frame.Visible == false then
+			frame.Visible = true
+		end
+	end)
+	
+end
+coroutine.wrap(MSVBGZ_fake_script)()
+local function HOTHRVO_fake_script() -- Icon.Smooth GUI Dragging 
+	local script = Instance.new('LocalScript', Icon)
+
+	local UserInputService = game:GetService("UserInputService")
+	local runService = (game:GetService("RunService"));
+	
+	local gui = script.Parent
+	
+	local dragging
+	local dragInput
+	local dragStart
+	local startPos
+	
+	function Lerp(a, b, m)
+		return a + (b - a) * m
+	end;
+	
+	local lastMousePos
+	local lastGoalPos
+	local DRAG_SPEED = (8); -- // The speed of the UI darg.
+	function Update(dt)
+		if not (startPos) then return end;
+		if not (dragging) and (lastGoalPos) then
+			gui.Position = UDim2.new(startPos.X.Scale, Lerp(gui.Position.X.Offset, lastGoalPos.X.Offset, dt * DRAG_SPEED), startPos.Y.Scale, Lerp(gui.Position.Y.Offset, lastGoalPos.Y.Offset, dt * DRAG_SPEED))
+			return 
+		end;
+	
+		local delta = (lastMousePos - UserInputService:GetMouseLocation())
+		local xGoal = (startPos.X.Offset - delta.X);
+		local yGoal = (startPos.Y.Offset - delta.Y);
+		lastGoalPos = UDim2.new(startPos.X.Scale, xGoal, startPos.Y.Scale, yGoal)
+		gui.Position = UDim2.new(startPos.X.Scale, Lerp(gui.Position.X.Offset, xGoal, dt * DRAG_SPEED), startPos.Y.Scale, Lerp(gui.Position.Y.Offset, yGoal, dt * DRAG_SPEED))
+	end;
+	
+	gui.InputBegan:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+			dragging = true
+			dragStart = input.Position
+			startPos = gui.Position
+			lastMousePos = UserInputService:GetMouseLocation()
+	
+			input.Changed:Connect(function()
+				if input.UserInputState == Enum.UserInputState.End then
+					dragging = false
+				end
+			end)
+		end
+	end)
+	
+	gui.InputChanged:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+			dragInput = input
+		end
+	end)
+	
+	runService.Heartbeat:Connect(Update)
+end
+coroutine.wrap(HOTHRVO_fake_script)()
+local function GGUNB_fake_script() -- Exit.LocalScript 
+	local script = Instance.new('LocalScript', Exit)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.Parent.Visible = false
+	end)
+	
+	
+	
+	
+end
+coroutine.wrap(GGUNB_fake_script)()
+local function OMVTTCN_fake_script() -- Frame2.Smooth GUI Dragging 
+	local script = Instance.new('LocalScript', Frame2)
+
+	local UserInputService = game:GetService("UserInputService")
+	local runService = (game:GetService("RunService"));
+	
+	local gui = script.Parent
+	
+	local dragging
+	local dragInput
+	local dragStart
+	local startPos
+	
+	function Lerp(a, b, m)
+		return a + (b - a) * m
+	end;
+	
+	local lastMousePos
+	local lastGoalPos
+	local DRAG_SPEED = (8); -- // The speed of the UI darg.
+	function Update(dt)
+		if not (startPos) then return end;
+		if not (dragging) and (lastGoalPos) then
+			gui.Position = UDim2.new(startPos.X.Scale, Lerp(gui.Position.X.Offset, lastGoalPos.X.Offset, dt * DRAG_SPEED), startPos.Y.Scale, Lerp(gui.Position.Y.Offset, lastGoalPos.Y.Offset, dt * DRAG_SPEED))
+			return 
+		end;
+	
+		local delta = (lastMousePos - UserInputService:GetMouseLocation())
+		local xGoal = (startPos.X.Offset - delta.X);
+		local yGoal = (startPos.Y.Offset - delta.Y);
+		lastGoalPos = UDim2.new(startPos.X.Scale, xGoal, startPos.Y.Scale, yGoal)
+		gui.Position = UDim2.new(startPos.X.Scale, Lerp(gui.Position.X.Offset, xGoal, dt * DRAG_SPEED), startPos.Y.Scale, Lerp(gui.Position.Y.Offset, yGoal, dt * DRAG_SPEED))
+	end;
+	
+	gui.InputBegan:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+			dragging = true
+			dragStart = input.Position
+			startPos = gui.Position
+			lastMousePos = UserInputService:GetMouseLocation()
+	
+			input.Changed:Connect(function()
+				if input.UserInputState == Enum.UserInputState.End then
+					dragging = false
+				end
+			end)
+		end
+	end)
+	
+	gui.InputChanged:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+			dragInput = input
+		end
+	end)
+	
+	runService.Heartbeat:Connect(Update)
+end
+coroutine.wrap(OMVTTCN_fake_script)()
