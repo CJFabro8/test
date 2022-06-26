@@ -29,3 +29,13 @@ local Tab2 = Window:NewTab("Sword Fighting",false)
 Tab2:NewButton("Woot Reach",function() loadstring(game:HttpGet(('https://raw.githubusercontent.com/CJFabro8/test/main/uhhh'),true))() end, false)
 
 Tab2:NewButton("Best reach",function() loadstring(game:HttpGet(('https://raw.githubusercontent.com/CJFabro8/test/main/best%20reach%20idk%3F'),true))() end, false)
+
+local Tab3 = Window:NewTab("Trolling",false)
+
+Tab3:NewButton("UTG V3",function() loadstring(game:HttpGet("https://raw.githubusercontent.com/Blukez/Scripts/main/UTG%20V3%20RAW"))() end, false)
+
+Tab3:NewButton("FE Trolling GUI",function() loadstring(game:HttpGet("https://pastebin.com/raw/wDh1eTdX"))() end, false)
+
+local Tab4 = Window:NewTab("Fun Stuff",false)
+
+Tab4:NewButton("FE Telekinesis V2",function() print('Example') end, false)
